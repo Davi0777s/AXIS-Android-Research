@@ -103,7 +103,7 @@ jobs:
           [System.IO.Compression.ZipFile]::CreateFromDirectory($src, $zip, [System.IO.Compression.CompressionLevel]::Optimal, $false)
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: AXIS-runtime
           path: dist/AXIS-v${{ github.run_number }}.zip
